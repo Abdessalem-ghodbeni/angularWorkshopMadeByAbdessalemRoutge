@@ -1,0 +1,815 @@
+<main>
+  <section class="pt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+          <!-- Bg -->
+          <div
+            class="pt-8 rounded-top-md"
+            style="
+              background: url(../assets/images/background/profile-bg.jpg)
+                no-repeat;
+              background-size: cover;
+              height: 100px;
+            "
+          ></div>
+          <div class="card rounded-0 rounded-bottom px-4 pt-2 pb-4">
+            <div class="d-flex align-items-end justify-content-between">
+              <div class="d-flex align-items-center flex-lg-row flex-column">
+                <div
+                  class="me-2 position-relative d-flex justify-content-end align-items-end mt-n5"
+                >
+                  <img
+                    src="../assets/slouma.png"
+                    class="avatar-xl rounded-circle border border-4 border-white"
+                    alt="avatar"
+                  />
+                </div>
+                <div class="lh-1 flex-lg-row flex-column">
+                  <h2 class="mb-0">
+                    Ghodbeni Abdessalem
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-placement="top"
+                      title="Beginner"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="3"
+                          y="8"
+                          width="2"
+                          height="6"
+                          rx="1"
+                          fill="#754FFE"
+                        ></rect>
+                        <rect
+                          x="7"
+                          y="5"
+                          width="2"
+                          height="9"
+                          rx="1"
+                          fill="#DBD8E9"
+                        ></rect>
+                        <rect
+                          x="11"
+                          y="2"
+                          width="2"
+                          height="12"
+                          rx="1"
+                          fill="#DBD8E9"
+                        ></rect>
+                      </svg>
+                    </a>
+                  </h2>
+                  <p class="mb-0 d-block">Ingénieur en génie informatique</p>
+                </div>
+              </div>
+              <div>
+                <a
+                  href="profile-edit.html"
+                  class="btn btn-primary btn-sm d-none d-md-block"
+                  >Account Setting</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Content -->
+  <section class="pb-5 py-md-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Side Navbar -->
+          <ul class="nav nav-lb-tab mb-6" id="tab" role="tablist">
+            <li class="nav-item ms-0" role="presentation">
+              <a
+                class="nav-link active"
+                id="bookmarked-tab"
+                data-bs-toggle="pill"
+                href="#bookmarked"
+                role="tab"
+                aria-controls="bookmarked"
+                aria-selected="true"
+                >Introduction
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="currentlyLearning-tab"
+                data-bs-toggle="pill"
+                href="#currentlyLearning"
+                role="tab"
+                aria-controls="currentlyLearning"
+                aria-selected="false"
+              >
+                Configuration des routes
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="path-tab"
+                data-bs-toggle="pill"
+                href="#path"
+                role="tab"
+                aria-controls="path"
+                aria-selected="false"
+                >Les routes paramétrées</a
+              >
+            </li>
+          </ul>
+          <!-- Tab content -->
+          <div class="tab-content" id="tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="bookmarked"
+              role="tabpanel"
+              aria-labelledby="bookmarked-tab"
+            >
+              <div class="row">
+                <!-- Accordion Angular Routing Introduction -->
+                <div class="accordion" id="accordionAngularRouting">
+                  <!-- Qu’est-ce que le routage ? -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingRoutingDefinition">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseRoutingDefinition"
+                        aria-expanded="true"
+                        aria-controls="collapseRoutingDefinition"
+                      >
+                        Qu’est-ce que le routage ?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseRoutingDefinition"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingRoutingDefinition"
+                      data-bs-parent="#accordionAngularRouting"
+                    >
+                      <div class="accordion-body">
+                        Le <strong>routage</strong> dans Angular est un
+                        mécanisme qui permet de naviguer entre différentes pages
+                        (ou composants) d'une application à **page unique
+                        (SPA)** sans recharger la page entière. <br /><br />
+                        Lorsqu'on change d'URL (par exemple de
+                        <code>/home</code> à <code>/about</code>), Angular
+                        intercepte ce changement et affiche dynamiquement le
+                        composant correspondant, sans recharger toute
+                        l'application. <br /><br />
+                        <strong>Démonstration (1 min) :</strong> Je vais vous
+                        montrer une petite application Angular où on clique sur
+                        différents liens du menu, et on observe :
+                        <ul>
+                          <li>
+                            Le changement de l’URL dans la barre d’adresse
+                            (path)
+                          </li>
+                          <li>Le contenu affiché qui change automatiquement</li>
+                          <li>
+                            Différents types de navigation : par clic, par
+                            logique conditionnelle, par programmation…
+                          </li>
+                        </ul>
+                        Tout cela est possible grâce au module de
+                        <strong>Router d’Angular</strong>, qui permet de gérer
+                        ces comportements de manière propre et modulaire.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pourquoi utiliser un router ? -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingWhyRouter">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseWhyRouter"
+                        aria-expanded="false"
+                        aria-controls="collapseWhyRouter"
+                      >
+                        Pourquoi utiliser un router ?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseWhyRouter"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingWhyRouter"
+                      data-bs-parent="#accordionAngularRouting"
+                    >
+                      <div class="accordion-body">
+                        Utiliser un router dans Angular présente plusieurs
+                        avantages :
+                        <ul>
+                          <li>
+                            Permet de construire des applications à pages
+                            multiples (mais en réalité, c’est une seule page
+                            HTML qui évolue dynamiquement).
+                          </li>
+                          <li>
+                            Améliore l'expérience utilisateur avec des
+                            transitions rapides.
+                          </li>
+                          <li>
+                            Structure l'application en modules et composants
+                            bien séparés.
+                          </li>
+                          <li>
+                            Permet de gérer facilement la navigation
+                            conditionnelle (authentification, autorisation,
+                            etc.).
+                          </li>
+                          <li>
+                            Supporte le lazy loading pour améliorer les
+                            performances.
+                          </li>
+                        </ul>
+                        Sans router, chaque changement de "page" nécessiterait
+                        de recharger toute l’application – ce qui irait à
+                        l'encontre des principes SPA (Single Page Application).
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Créer une nouvelle app Angular -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingCreateApp">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseCreateApp"
+                        aria-expanded="false"
+                        aria-controls="collapseCreateApp"
+                      >
+                        Créer une nouvelle application Angular avec le Router
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseCreateApp"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingCreateApp"
+                      data-bs-parent="#accordionAngularRouting"
+                    >
+                      <div class="accordion-body">
+                        <p>
+                          Pour démarrer une nouvelle application Angular avec le
+                          système de routage intégré, deux méthodes s’offrent à
+                          vous :
+                        </p>
+
+                        <h6 class="fw-bold">
+                          ✔️ Méthode 1 – Avec le flag <code>--routing</code>
+                        </h6>
+                        <p>
+                          Commande directe pour générer l’application avec le
+                          routage :
+                        </p>
+                        <pre><code>ng new angular-routing-demo --routing</code></pre>
+                        <p>Cela crée automatiquement :</p>
+                        <ul>
+                          <li>Le fichier <code>app-routing.module.ts</code></li>
+                          <li>
+                            L’import du <code>RouterModule</code> dans
+                            <code>AppModule</code>
+                          </li>
+                        </ul>
+                        <p>Ensuite :</p>
+                        <pre><code>cd angular-routing-demo
+ng serve</code></pre>
+
+                        <hr />
+
+                        <h6 class="fw-bold">
+                          ✔️ Méthode 2 – En mode interactif (visible sur la
+                          capture)
+                        </h6>
+                        <p>Lancez simplement :</p>
+                        <pre><code>ng new nom-de-ton-app</code></pre>
+                        <p>Angular vous posera des questions :</p>
+                        <ul>
+                          <li>
+                            <strong
+                              >Would you like to add Angular routing?</strong
+                            >
+                            → Répondez <code>Yes</code>
+                          </li>
+                          <li>
+                            <strong
+                              >Which stylesheet format would you like to
+                              use?</strong
+                            >
+                            → Choisissez <code>CSS</code>, <code>SCSS</code>,
+                            etc.
+                          </li>
+                        </ul>
+
+                        <div class="mt-3">
+                          <img
+                            src="../image.png"
+                            class="img-fluid w-75 border rounded shadow-sm"
+                            alt="Capture de l’invite Angular CLI"
+                          />
+                          <p class="text-muted small mt-2">
+                            Exemple : Création en mode interactif avec Angular
+                            CLI.
+                          </p>
+                        </div>
+
+                        <p class="mt-3">
+                          Vous pouvez ensuite créer vos composants et configurer
+                          vos routes dans <code>app-routing.module.ts</code> !
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Explication de <base href="/"> -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingBaseHref">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseBaseHref"
+                        aria-expanded="false"
+                        aria-controls="collapseBaseHref"
+                      >
+                        Comprendre la balise
+                        <code>&lt;base href="/"&gt;</code> dans Angular
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseBaseHref"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingBaseHref"
+                      data-bs-parent="#accordionAngularRouting"
+                    >
+                      <div class="accordion-body">
+                        <div
+                          class="row justify-content-center align-items-center"
+                        >
+                          <div class="col-md-6 col-12 p-2">
+                            <img
+                              src="../assets/image.png"
+                              class="img-fluid w-100"
+                              alt=""
+                            />
+                          </div>
+                          <div class="col-md-6 col-12 p-2">
+                            Dans le fichier <code>index.html</code> d’un projet
+                            Angular, on trouve souvent la ligne suivante :
+                            <pre><code>&lt;base href="/"&gt;</code></pre>
+
+                            Cette balise a un rôle crucial dans le
+                            fonctionnement de l’application :
+                            <ul>
+                              <li>
+                                📍 Elle définit la <strong>racine</strong> de
+                                toutes les URLs utilisées dans l’application.
+                              </li>
+                              <li>
+                                📦 Elle permet au
+                                <strong>router Angular</strong> de savoir
+                                comment gérer les routes comme
+                                <code>/accueil</code> ou <code>/contact</code>.
+                              </li>
+                              <li>
+                                ❌ Sans elle, la navigation dans l’application
+                                risque de générer des
+                                <strong>erreurs 404</strong> lors de
+                                l’actualisation des pages.
+                              </li>
+                            </ul>
+
+                            <div class="alert alert-info">
+                              <strong>Exemple :</strong> Si on a une image à
+                              <code>assets/logo.png</code> :
+                              <br />
+                              <ul>
+                                <li>
+                                  Avec <code>&lt;base href="/"&gt;</code> ➜ URL
+                                  correcte : <code>/assets/logo.png</code>
+                                </li>
+                                <li>
+                                  Avec
+                                  <code>&lt;base href="/mon-app/"&gt;</code> ➜
+                                  l’image est cherchée à :
+                                  <code>/mon-app/assets/logo.png</code>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <p>
+                              C’est donc une configuration essentielle pour que
+                              le système de <strong>routage</strong> et les
+                              chemins relatifs fonctionnent correctement dans
+                              Angular.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="currentlyLearning"
+              role="tabpanel"
+              aria-labelledby="currentlyLearning-tab"
+            >
+              <div class="row">
+                <main>
+                  <!-- en-tête -->
+                  <section class="py-8 bg-light">
+                    <div class="container">
+                      <div class="row">
+                        <div class="offset-md-2 col-md-8 col-12">
+                          <h1 class="fw-bold mb-0 display-4 lh-1">
+                            Configuration des routes
+                          </h1>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- contenu principal -->
+                  <section class="py-8">
+                    <div class="container">
+                      <div class="row">
+                        <div class="offset-md-2 col-md-8 col-12">
+                          <div class="row gy-4">
+                            <!-- 0. Pas à pas : définir une route -->
+                            <div class="col-12">
+                              <div class="card border">
+                                <div
+                                  class="card-body d-flex flex-column gap-4 p-5"
+                                >
+                                  <h2 class="fw-semibold mb-2">
+                                    0. Pas à pas : définition d’une route
+                                  </h2>
+                                  <p class="mb-3">
+                                    Toutes vos routes se trouvent dans
+                                    <code>app-routing.module.ts</code> :
+                                  </p>
+                                  <img
+                                    src="../1.png"
+                                    class="img-fluid w-100"
+                                    alt=""
+                                  />
+
+                                  <p class="small text-muted">Explications :</p>
+                                  <ul>
+                                    <li>
+                                      <code>path</code> : segment de l’URL à
+                                      matcher.
+                                    </li>
+                                    <li>
+                                      <code>component</code> : composant à
+                                      afficher.
+                                    </li>
+                                    <li>
+                                      <code>redirectTo</code> : URL de
+                                      redirection.
+                                    </li>
+                                    <li>
+                                      <code>pathMatch: 'full'</code> : match
+                                      exact de l’URL.
+                                    </li>
+                                    <li>
+                                      <code>RouterModule.forRoot(routes)</code
+                                      > : méthode qui configure le routeur au
+                                      niveau racine.
+                                    </li>
+                                  </ul>
+
+                                  <small
+                                    >L'étape finale consiste à ajouter la balise
+                                    <code
+                                      >< router-outlet> < /router-outlet>
+                                    </code>
+                                    dans le fichier
+                                    <code> app.component.html</code> , car c'est
+                                    à cet emplacement que les composants
+                                    correspondant aux routes définies seront
+                                    affichés. Cette balise sert de point
+                                    d'ancrage pour la navigation, permettant
+                                    ainsi à l'application de charger
+                                    dynamiquement les vues en fonction des
+                                    routes sélectionnées par l'utilisateur.
+                                  </small>
+                                  <img
+                                    src="../3.png"
+                                    class="img-fluid w-100"
+                                    alt=""
+                                  />
+                                  <!-- </p> -->
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 1. RouterModule forRoot / forChild -->
+                            <div class="col-12">
+                              <div class="card border">
+                                <div
+                                  class="card-body d-flex flex-column gap-4 p-5"
+                                >
+                                  <h2 class="fw-semibold mb-2">
+                                    1. RouterModule &ndash; forRoot vs forChild
+                                  </h2>
+                                  <p class="mb-3">
+                                    Le module
+                                    <code>RouterModule</code> configure le
+                                    système de routing :
+                                  </p>
+                                  <ul class="list-unstyled mb-0">
+                                    <li>
+                                      <strong>forRoot(routes)</strong> : à
+                                      utiliser dans
+                                      <code>AppRoutingModule</code> (module
+                                      racine).
+                                    </li>
+                                    <li>
+                                      <strong>forChild(routes)</strong> : à
+                                      utiliser dans les modules enfants
+                                      (lazy-loaded).
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 2. Wildcard -->
+                            <div class="col-12">
+                              <div class="card border">
+                                <div
+                                  class="card-body d-flex flex-column gap-4 p-5"
+                                >
+                                  <h2 class="fw-semibold mb-2">
+                                    2. Wildcard Route (<code>**</code>) (Page
+                                    not found)
+                                  </h2>
+                                  <p class=" ">
+                                    Capture toutes les URL non reconnues. Doit
+                                    être en dernière position :
+                                  </p>
+
+                                  <code>
+                                    path: '**', component: NotFoundComponent
+                                    <!-- // app-routing.module.ts
+                const routes: Routes = [
+                  // … routes principales …
+                  { path: '**', component: HomeComponent }  // toujours en dernier
+                ];
+
+                @NgModule({
+                  imports: [RouterModule.forRoot(routes)],
+                  exports: [RouterModule]
+                })
+                export class AppRoutingModule { } -->
+                                  </code>
+                                  <img
+                                    src="../2.png"
+                                    class="img-fluid w-100"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 5. Liens dynamiques -->
+                            <div class="col-12">
+                              <div class="card border">
+                                <div
+                                  class="card-body d-flex flex-column gap-4 p-5"
+                                >
+                                  <h2 class="fw-semibold mb-3">
+                                    4 . RouterLink
+                                  </h2>
+                                  <p class="mb-3">
+                                    Alternative optimisée pour la navigation SPA
+                                    :
+                                  </p>
+
+                                  <div class="alert alert-warning mb-3">
+                                    <strong>Problématique :</strong><br />
+                                    Les liens HTML classiques rechargent toute
+                                    la page ➔ Expérience utilisateur dégradée
+                                  </div>
+                                  <pre
+                                    class="bg-light p-3 rounded mb-3"
+                                  ><code>&lt;a routerLink="/search"&gt;Recherche&lt;/a&gt;</code></pre>
+
+                                  <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                      ✅ Intercepte le clic via JavaScript
+                                    </li>
+                                    <li class="mb-2">
+                                      ✅ Mise à jour partielle du DOM
+                                    </li>
+                                    <li class="mb-2">
+                                      ✅ Génère quand même un href valide pour
+                                      le SEO
+                                    </li>
+                                  </ul>
+                                  <h2 class="fw-semibold mb-3">
+                                    5 . Liens dynamiques
+                                  </h2>
+                                  <p>
+                                    Génération programmatique des URLs :
+                                    ,Création du composant ListeProduit
+                                  </p>
+                                  <pre
+                                    class="bg-light p-3 rounded"
+                                  ><code>ng generate component product-list</code></pre>
+
+                                  <div class="alert alert-info mt-3">
+                                    <span
+                                      >Configuration de la route : c'est un
+                                      execice a faire avec un étudiant
+                                      àléatoirement, et faire l'affichage d'une
+                                      liste des produit qui se trouve dans dans
+                                      le fichier ts en utilisant la directive
+                                      *ngFor
+                                    </span>
+                                  </div>
+                                  <p>
+                                    Création du composant DetailsProduit et
+                                    faire la configuration de la route dans le
+                                    fichier de routage, c'est le Routage
+                                    paramétrée pour le détail
+                                  </p>
+                                  <div class="alert alert-warning mt-3">
+                                    <strong>Explication :</strong>
+                                    <ul>
+                                      <li>
+                                        <code>:id</code> est un paramètre
+                                        dynamique
+                                      </li>
+                                      <li>
+                                        Ser remplacé par l'ID réel du produit
+                                        (ex: /produit/2)
+                                      </li>
+                                      <li>
+                                        Permet d'identifier un produit
+                                        spécifique
+                                      </li>
+                                    </ul>
+                                  </div>
+
+                                  <img
+                                    src="../4.png"
+                                    class="img-fluid w-100"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    src="../5.png"
+                                    class="img-fluid w-100"
+                                    alt=""
+                                  />
+                                  <h3 class="text-primary mb-4">
+                                    6. Navigation vers le détail
+                                  </h3>
+                                  <p>
+                                    Ajouter lien voir détails et Génère un lien
+                                    dynamique basé sur l'ID a traver la
+                                    directive Angular
+                                    <code>routerLink </code> qui permet de
+                                    naviguer entre les différentes vues
+                                  </p>
+                                  <pre class="bg-light p-3 rounded">
+&lt;a [routerLink]="['/produit', product.id]"&gt;Détails&lt;/a&gt;</pre
+                                  >
+
+                                  <div class="alert alert-info mt-3">
+                                    <strong>Fonctionnement :</strong>
+                                    <ul>
+                                      <li>
+                                        Génère un lien dynamique basé sur l'ID
+                                      </li>
+                                      <li>
+                                        Exemple : product.id = 3 → /produit/3
+                                      </li>
+                                      <li>Pas de rechargement de page (SPA)</li>
+                                    </ul>
+                                  </div>
+                                  <span>
+                                    Résultat : il y navigation vers une page
+                                    mais accun affichage, la valeur de l'id dans
+                                    la route se change a chaque fois que vous
+                                    selectionnez un autre produit, comment
+                                    recupérer l'id depuis la route ?
+                                  </span>
+                                  <h3 class="text-primary mb-4">
+                                    5. Récupération de l'ID dans le détail
+                                  </h3>
+
+                                  <pre class="bg-light p-3 rounded"></pre>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 6. RouterLinkActive -->
+                            <div class="col-lg-6 col-12">
+                              <div class="card border">
+                                <div
+                                  class="card-body d-flex flex-column gap-4 p-5"
+                                >
+                                  <h2 class="fw-semibold mb-2">
+                                    6. RouterLinkActive
+                                  </h2>
+                                  <p class="mb-3">
+                                    Applique une classe au lien actif :
+                                  </p>
+                                  <pre
+                                    class="bg-light p-3 rounded"
+                                  ><code>&lt;nav&gt;
+                  &lt;a routerLink="/home" routerLinkActive="active"&gt;Accueil&lt;/a&gt;
+                  &lt;a routerLink="/about" routerLinkActive="active"&gt;À propos&lt;/a&gt;
+                &lt;/nav&gt;
+
+                &lt;router-outlet&gt;&lt;/router-outlet&gt;</code></pre>
+                                </div>
+                                <div class="card-footer">
+                                  <a href="#" class="link-primary"
+                                    >Styling CSS
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="20"
+                                      height="20"
+                                      fill="currentColor"
+                                      class="bi bi-arrow-right-short"
+                                      viewBox="0 0 16 16"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                                      />
+                                    </svg>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </main>
+              </div>
+            </div>
+            <!-- Path -->
+            <div
+              class="tab-pane fade"
+              id="path"
+              role="tabpanel"
+              aria-labelledby="path-tab"
+            >
+              <div class="row d-flex justify-content-center text-center">
+                <div class="col-xl-5 col-lg-5 col-md-12 col-12">
+                  <div class="py-6">
+                    <img
+                      src="https://geeksui.codescandy.com/geeks/assets/images/svg/path-img.svg"
+                      alt="path"
+                      class="img-fluid"
+                    />
+                    <div class="mt-4">
+                      <h2 class="display-4 fw-bold">Coming Soon</h2>
+                      <p class="mb-5">
+                        The designer working on our design so for now we
+                        schedule it to come soon. we release it soon for you.
+                        Thank you for watching.
+                      </p>
+                      <a
+                        href="https://geeksui.codescandy.com/geeks/index.html"
+                        class="btn btn-primary"
+                        >Back To Dashboard</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
