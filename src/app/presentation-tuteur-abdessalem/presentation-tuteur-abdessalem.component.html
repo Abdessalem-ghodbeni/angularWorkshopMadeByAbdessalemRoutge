@@ -113,7 +113,7 @@
                 aria-controls="currentlyLearning"
                 aria-selected="false"
               >
-                Configuration des routes
+                Configuration des routes et routes paramétrées
               </a>
             </li>
             <li class="nav-item" role="presentation">
@@ -125,7 +125,7 @@
                 role="tab"
                 aria-controls="path"
                 aria-selected="false"
-                >Les routes paramétrées</a
+                >Route active et child root</a
               >
             </li>
           </ul>
@@ -462,7 +462,7 @@ ng serve</code></pre>
                                   class="card-body d-flex flex-column gap-4 p-5"
                                 >
                                   <h2 class="fw-semibold mb-2">
-                                    0. Pas à pas : définition d’une route
+                                    1. Pas à pas : définition d’une route
                                   </h2>
                                   <p class="mb-3">
                                     Toutes vos routes se trouvent dans
@@ -531,7 +531,7 @@ ng serve</code></pre>
                                   class="card-body d-flex flex-column gap-4 p-5"
                                 >
                                   <h2 class="fw-semibold mb-2">
-                                    1. RouterModule &ndash; forRoot vs forChild
+                                    2. RouterModule &ndash; forRoot vs forChild
                                   </h2>
                                   <p class="mb-3">
                                     Le module
@@ -562,7 +562,7 @@ ng serve</code></pre>
                                   class="card-body d-flex flex-column gap-4 p-5"
                                 >
                                   <h2 class="fw-semibold mb-2">
-                                    2. Wildcard Route (<code>**</code>) (Page
+                                    3. Wildcard Route (<code>**</code>) (Page
                                     not found)
                                   </h2>
                                   <p class=" ">
@@ -720,8 +720,72 @@ ng serve</code></pre>
                                   <h3 class="text-primary mb-4">
                                     5. Récupération de l'ID dans le détail
                                   </h3>
+                                  <img
+                                    src="../a2.png"
+                                    class="img-fluid w-100"
+                                    alt=""
+                                  />
+                                  <img
+                                    src="../a1.png"
+                                    class="img-fluid w-100"
+                                    alt=""
+                                  />
+                                  <img
+                                    src="../a3.png"
+                                    class="img-fluid w-100"
+                                    alt=""
+                                  />
+                                  <h5>C'est quoi ActivatedRoute ?</h5>
+                                  <code>
+                                    ActivatedRoute est un service Angular qui
+                                    donne accès aux informations de la route
+                                    actuelle.</code
+                                  >
 
-                                  <pre class="bg-light p-3 rounded"></pre>
+                                  <code
+                                    >La différence essentielle réside dans la
+                                    réactivité : La méthode params.subscribe
+                                    utilise un Observable qui met à jour
+                                    dynamiquement l'ID si la route change sans
+                                    recharger le composant (idéal pour les SPA),
+                                    tandis que snapshot récupère la valeur une
+                                    seule fois à l'initialisation (adapté quand
+                                    le composant est rechargé à chaque
+                                    navigation). La première nécessite une
+                                    gestion des abonnements, la seconde est plus
+                                    simple mais moins flexible.</code
+                                  >
+                                  <h3 class="text-primary mb-4">
+                                    Le service Router
+                                  </h3>
+                                  Dans le composant Details Produit nous allons
+                                  ajouter un button Retour a la liste des
+                                  Produit qui permet de faire un retour vers la
+                                  liste , dans le constructor nous allons
+                                  injecter le Router
+                                  <code> private router: Router</code> puis
+                                  faire une fonction
+                                  <code>navigateToList()</code>
+                                  <img
+                                    src="../h1.png"
+                                    class="img-fluid w-100"
+                                    alt=""
+                                  /><img
+                                    src="../h2.png"
+                                    class="img-fluid w-100"
+                                    alt=""
+                                  />
+                                  <img
+                                    src="../h3.png"
+                                    class="img-fluid w-100"
+                                    alt=""
+                                  />
+                                  <code
+                                    >NB : I l faut parler aussi des autres
+                                    méthodes comme
+                                    navigateByUrl(),createUrlTree()... faire un
+                                    exemple si necessaire</code
+                                  >
                                 </div>
                               </div>
                             </div>
@@ -733,7 +797,7 @@ ng serve</code></pre>
                                   class="card-body d-flex flex-column gap-4 p-5"
                                 >
                                   <h2 class="fw-semibold mb-2">
-                                    6. RouterLinkActive
+                                    7. RouterLinkActive
                                   </h2>
                                   <p class="mb-3">
                                     Applique une classe au lien actif :
@@ -782,26 +846,233 @@ ng serve</code></pre>
               role="tabpanel"
               aria-labelledby="path-tab"
             >
-              <div class="row d-flex justify-content-center text-center">
-                <div class="col-xl-5 col-lg-5 col-md-12 col-12">
-                  <div class="py-6">
-                    <img
-                      src="https://geeksui.codescandy.com/geeks/assets/images/svg/path-img.svg"
-                      alt="path"
-                      class="img-fluid"
-                    />
-                    <div class="mt-4">
-                      <h2 class="display-4 fw-bold">Coming Soon</h2>
-                      <p class="mb-5">
-                        The designer working on our design so for now we
-                        schedule it to come soon. we release it soon for you.
-                        Thank you for watching.
-                      </p>
-                      <a
-                        href="https://geeksui.codescandy.com/geeks/index.html"
-                        class="btn btn-primary"
-                        >Back To Dashboard</a
-                      >
+              <div class="container">
+                <div
+                  class="tab-pane fade show active"
+                  id="bookmarked"
+                  role="tabpanel"
+                  aria-labelledby="bookmarked-tab"
+                >
+                  <div class="row">
+                    <!-- Accordion Angular Routing Introduction -->
+                    <div class="accordion" id="accordionAngularRouting">
+                      <!-- Qu’est-ce que le routage ? -->
+                      <div class="accordion-item">
+                        <h2
+                          class="accordion-header"
+                          id="headingRoutingDefinition"
+                        >
+                          <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseRoutingDefinition"
+                            aria-expanded="true"
+                            aria-controls="collapseRoutingDefinition"
+                          >
+                            8. visualiser la route active
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseRoutingDefinition"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="headingRoutingDefinition"
+                          data-bs-parent="#accordionAngularRouting"
+                        >
+                          <div class="accordion-body">
+                            Nous allons créer un composant Navbar qui contient
+                            des liens de navigation vers différentes pages de
+                            notre application : la page d'accueil (/home), la
+                            page d'inscription (/signin) et la liste des
+                            produits (/list-produits). Pour savoir quelle route
+                            est actuellement active et appliquer un style visuel
+                            distinct (comme une couleur rouge), nous utilisons
+                            la directive Angular routerLinkActive="active"
+                            combinée à
+                            <code>
+                              [routerLinkActiveOptions]=" exact: true ".</code
+                            >
+                            Cette directive ajoute dynamiquement une classe CSS
+                            (active) au lien correspondant à la route en cours,
+                            ce qui nous permet de le styliser facilement.
+
+                            <img
+                              src="../h4.png"
+                              class="img-fluid w-100"
+                              alt="avatar"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion" id="accordionChildRoutes">
+                      <!-- Section Child Routes Basiques -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingBasicChild">
+                          <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseBasicChild"
+                            aria-expanded="true"
+                            aria-controls="collapseBasicChild"
+                          >
+                            9. Les Child Routes (Routes Enfants)
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseBasicChild"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="headingBasicChild"
+                          data-bs-parent="#accordionChildRoutes"
+                        >
+                          <div class="accordion-body">
+                            <div class="alert alert-story">
+                              Dans une application Angular, il est souvent utile
+                              d’organiser les composants selon une hiérarchie,
+                              surtout lorsqu’un composant "parent" sert de
+                              conteneur à plusieurs composants "enfants". C’est
+                              exactement ce qu’on appelle les routes enfants ou
+                              child routes. Imaginons qu’on a une section
+                              /produits dans notre application. Cette section
+                              peut afficher différentes vues selon le contexte :
+                              <ul>
+                                <li>
+                                  <code>/produits/liste </code>→ Affiche la
+                                  liste des produits
+                                </li>
+
+                                <li>
+                                  <code>/produits/ajouter </code>→ Formulaire
+                                  pour ajouter un nouveau produit
+                                </li>
+
+                                <li>
+                                  <code>/produits/:id </code>→ Détails d’un
+                                  produit spécifique Dans ce cas,
+                                  ProduitsComponent est le parent qui contient
+                                  un
+                                </li>
+                                <li>
+                                  <code>< router-outlet> </code> pour afficher
+                                  les vues enfants.
+                                </li>
+                              </ul>
+                            </div>
+
+                            <h5>Configuration Basique :</h5>
+                            <pre><code class="language-typescript">
+
+
+                            </code></pre>
+
+                            <img
+                              src="../H6.png"
+                              class="img-fluid w-75"
+                              alt="avatar"
+                            />
+                            <img
+                              src="../H7.png"
+                              class="img-fluid w-75"
+                              alt="avatar"
+                            />
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">
+                                ✅ Meilleure organisation des composants
+                              </li>
+                              <li class="list-group-item">
+                                ✅ Facilité de navigation contextuelle (garder
+                                le même layout ou header)
+                              </li>
+                              <li class="list-group-item">
+                                ✅ Contrôle plus précis sur les autorisations ou
+                                les guards par sous-route
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Section Lazy Loading -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingLazyLoading">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseLazyLoading"
+                            aria-expanded="false"
+                            aria-controls="collapseLazyLoading"
+                          >
+                            10. Lazy Loading (Chargement Paresseux)
+                          </button>
+                        </h2>
+                        <div
+                          id="collapseLazyLoading"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="headingLazyLoading"
+                          data-bs-parent="#accordionChildRoutes"
+                        >
+                          <div class="accordion-body">
+                            <div class="alert alert-story">
+                              <strong>Histoire animée :</strong> Quand une
+                              application Angular devient grande, charger tous
+                              les modules dès le début peut ralentir le
+                              démarrage. C’est là que le lazy loading devient
+                              très utile.
+                            </div>
+                            <code>❓ C’est quoi le lazy loading ?</code>
+                            <p>
+                              Le lazy loading permet de charger un module
+                              uniquement quand il est nécessaire, c’est-à-dire
+                              au moment où l’utilisateur accède à une certaine
+                              route.
+                            </p>
+                            <h5>Commande de génération :</h5>
+                            <pre><code class="language-bash">
+                    ng generate module modules/produits --routing
+                            </code></pre>
+
+                            <h5>
+                              Je vais continuer le process par un exemple de
+                              ajout produit .... (si cette partie s'agit du
+                              programme INFEINI)
+                            </h5>
+                            <pre><code class="language-typescript">
+                    <!-- // app-routing.module.ts
+                    const routes: Routes = [
+                      {
+                        path: 'admin',
+                        loadChildren: () => import('./features/admin/admin.module')
+                                          .then(m => m.AdminModule) // Chargé uniquement quand on visite /admin
+                      }
+                    ]; -->
+                            </code></pre>
+
+                            <div class="comparison-table">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>Avantages</th>
+                                    <th>Cas d'usage</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>🚀 Améliore les performances</td>
+                                    <td>Applications complexes</td>
+                                  </tr>
+                                  <tr>
+                                    <td>📦 Modules indépendants</td>
+                                    <td>Section d'administration</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
